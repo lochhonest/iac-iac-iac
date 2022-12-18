@@ -2,14 +2,19 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "appServiceAppName": {
-            "value": "Lorenz-assignment-app-dev-bicep"
+        "appServiceFEAppName": {
+            "value": "Lorenz-assignment-app-bicep-dev-fe"
         },
-        "appServicePlanName": {
-            "value": "Lorenz-assignment-asp-dev-bicep"
+        "appServiceFEPlanName": {
+            "value": "Lorenz-assignment-asp-bicep-dev-fe"
         },
+        "appServiceBEAppName": {
+            "value": "Lorenz-assignment-app-bicep-dev-be"
+        },
+        "appServiceBEPlanName": { 
+            "value": "Lorenz-assignment-asp-bicep-dev-be"},
         "storageAccountName": {
-            "value": "lorenzstoragedev"
-        }
+            "value": "lorenzstoragedev"}
+
     }
 }
