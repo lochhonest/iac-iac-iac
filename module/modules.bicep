@@ -18,6 +18,10 @@ var appServicePlanSkuName = (environmentType == 'prod') ? 'P2V3' : 'B1'
 resource appServicePlan 'Microsoft.Web/serverFarms@2022-03-01' = {
   name: appServicePlanName
   location: location
+  
+  properties: {
+    reserved: true
+  }
   sku: {
     name: appServicePlanSkuName
   }
@@ -53,4 +57,3 @@ resource appServiceApp 'Microsoft.Web/sites@2022-03-01' = {
 }
 
 output appServiceAppHostName string = appServiceApp.properties.defaultHostName
-
